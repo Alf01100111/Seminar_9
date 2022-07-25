@@ -4,25 +4,12 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-// void SumNumInRng(int n, int m, int sum = 0)
-// {
-//     if (n > m)
-//     {
-//         System.Console.WriteLine(sum);
-//         return;
-//     }
-//     sum += n;
-//     n++;
-//     SumNumInRng(n, m, sum);
-// }
-
-// SumNumInRng(4, 8);
-
-int Sum(int n, int m)
+int SumInRange(int n, int m, int sum = 0)
 {
-    if (n > m) return n;
-    n = n + n + 1;
-    return Sum(n, m) + n;
+    if (n == m + 1) return sum;
+    sum += n;
+    n++;
+    return SumInRange(n, m, sum);
 }
 
-System.Console.WriteLine(Sum(4, 8));
+System.Console.WriteLine(SumInRange(1, 4));
