@@ -18,4 +18,4 @@ int Akkerman(int n, int m)
     }
 }
 
-System.Console.WriteLine(Akkerman(3,3));
+System.Console.WriteLine(Akkerman(2,3));
